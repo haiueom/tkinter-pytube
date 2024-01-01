@@ -1,7 +1,7 @@
 import os
 import tkinter
 import customtkinter
-import threading
+from threading import Thread
 from pytube import YouTube, exceptions as pyte
 from datetime import datetime
 from urllib import error as ule
@@ -138,7 +138,7 @@ def main():
 
     def download():
         """Start a download_task"""
-        threading.Thread(target=download_task).start()
+        Thread(target=download_task).start()
 
     def set_widget_state(state):
         """Set the widget state"""
